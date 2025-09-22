@@ -3,26 +3,55 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chicle&display=swap">
+    <link href="hamburgers.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="logo">
-        <img src="logo.svg">
+    <div class="head">
+        <div class="logo">
+            <img src="logo.svg" class="real-logo">
+        </div>
+       <button class="hamburger hamburger--minus" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
     </div>
-    <div class="one">
-        <h1>Check My Portfolio</h1>
-       
+    <div class="menu">
+            <ul>
+                <li>Projects</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li class="socials"><img src="youtube.svg"><img src="instagram.svg"><img src="linkedin.svg"></li>
+            </ul>
+        </div>
+    <div class="content">
+            <div class="one">
+                <h1>Check My Portfolio</h1>
+                <img src="star.svg" class="star">
+            </div>
+            <div class="right"></div>
+            <div class="two">
+                <h2>I love the outdoors and having money</h2><p>Enter: graphic and web design
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+            </div>
+            <div class="three">
+                <h2>Latest Project</h2>
+                <img src="project-1.png">
+            </div>
+            <div class="four">
+                <h2>Something Short</h2>
+            </div>
+        </div>
     </div>
-    <div class="two">
-        <h2>I love the outdoors and having money</h2><p>Enter: graphic and web design
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
-    </div>
-    <div>
-        <h2>Latest Project</h2>
-    </div>
-    
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+            hamburger.classList.toggle("is-active");
+        });
+    </script>
 
 </body>
 </html>

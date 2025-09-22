@@ -2,24 +2,56 @@ body{
     background-color: #181818;
     font-family: chicle;
 }
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 .logo{
     width:70px;
     height: 70px;
     background-color:#fefae0;
     border-radius: 25px;
     padding: 10px;
+    margin: 16px;
     display: flex;
     justify-content: center;
 }
 .logo:hover{
     background-color:#606c38 ;
+    .real-logo{
+    filter: brightness(0%) saturate(100%) invert(97%) sepia(5%) saturate(1350%) hue-rotate(328deg) brightness(105%) contrast(99%);
 }
+}
+li{
+    list-style: none;
+    background-color:#606c38;
+    color: #fefae0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    margin: 16px;
+    padding: 16px;
+    height: 70px;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+}
+.socials{
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 70px;
+        padding: 0;
+    }
+}
+
 p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
 }
 div{
-     margin: 16px;
+    
      border-radius: 50px;
      
      
@@ -27,8 +59,7 @@ div{
 }
 .one{
    color: #fefae0;
-   width: 50vh;
-  height: 50vh;
+   margin: 16px;
   background-image: url(front-img.png);
   background-repeat: no-repeat;
   border-radius: 50px;
@@ -39,12 +70,12 @@ div{
   background-size: cover;
   
 }
-img{
-    border-radius: 50px;
-    width: 100%;
-    display: block;
-    border-bottom-right-radius:200px;
+.star{
+    width: 90px;
+    display: flex;
+    align-items: flex-end;
 }
+
 h1{
   font-size: 110px;
   text-align: center;
@@ -59,4 +90,46 @@ h2{
         padding: 16px;
         width: fit-content;
         height: fit-content;
+         margin: 16px;
+     }
+
+.three{
+    color:#fefae0;
+    margin: 16px;
+    img{
+        width: 100%;
+    }
+}
+.four{
+color:#283618;
+background-color: #606c38;
+height: 350px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 16px;
+ border-top-left-radius: 200px;
+
+}
+     @media only screen and (min-width: 992px) {
+        .menu{
+            display: none;
+
+        }
+        .content{
+            display: flex;
+
+        }
+        .right{
+            display: flex;
+            flex-direction: flex-start;
+        }
+        .one, .two, .three, .four{
+            width: 50vh;
+            height: 50vh;
+            min-width: 400px;
+        }
+        
+        
      }
