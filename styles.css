@@ -1,13 +1,17 @@
 body{
     background-color: #181818;
     font-family: chicle;
+    
+}
+.web-menu{
+    display: none;
 }
 .head{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
+
 .logo{
     width:70px;
     height: 70px;
@@ -48,7 +52,7 @@ li{
 
 p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
 }
 div{
     
@@ -68,6 +72,8 @@ div{
   justify-content: center;
   flex-direction: column;
   background-size: cover;
+  height: 500px;
+  
   
 }
 .star{
@@ -113,23 +119,95 @@ margin: 16px;
 
 }
      @media only screen and (min-width: 992px) {
-        .menu{
-            display: none;
+        .head,  .menu{
+            display:none;
+        }
+       
+        .web-menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+            ul{
+                 margin: 20px 0;
+                padding:0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                li{
+                    font-size: 30px;
+                    margin: 0 16px;
+                    padding: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 50px;
+                }
+                .green:hover{
+                    background-color:#fefae0;
+                    color: #606c38 ;
+                }
+                .real-logo{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 25px;
+                    padding: 10px;
+                    margin: 0;
+                  
+                }
+                .socials{
+                    display: flex;
+                justify-content: space-between;
+                background-color: #272727;
+                gap: 3vw;
+                
+                }
+                .socials:hover{
+                    background-color: #fefae0;
+                    img{
+                    filter: brightness(0) saturate(100%)invert(13%) sepia(0%) saturate(5%) hue-rotate(143deg) brightness(101%) contrast(94%);
+                }
+                }
+            }
+        }
+        .web-logo{
+            background-color: #fefae0;
+            height: 50px;
 
         }
-        .content{
+        .web-logo:hover{
+            background-color:#606c38 ;
+            .real-logo{
+            filter: brightness(0%) saturate(100%) invert(97%) sepia(5%) saturate(1350%) hue-rotate(328deg) brightness(105%) contrast(99%);
+        }
+        }
+        .content{   
             display: flex;
+        }
 
+        .one{
+            min-width: 50vw;
+            height: 80vh;
+            
         }
         .right{
-            display: flex;
-            flex-direction: flex-start;
+         display: flex;
+         flex-direction: flex-start;
+         flex-wrap: wrap;
+         
+         
         }
-        .one, .two, .three, .four{
-            width: 50vh;
-            height: 50vh;
-            min-width: 400px;
+        .two, .three, .four{
+           min-width: 25vw;
+           max-width: 50vw;
+           
+        }
+
+        h2{
+            margin: 0;
         }
         
-        
-     }
+    }
+     
