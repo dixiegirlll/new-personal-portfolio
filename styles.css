@@ -1,6 +1,12 @@
 body{
     background-color: #181818;
     font-family: chicle;
+    padding: 0 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
     
 }
 .web-menu{
@@ -74,6 +80,7 @@ div{
      
 }
 .one{
+    position: relative;
    color: #fefae0;
    margin: 16px;
   background-image: url(front-img.png);
@@ -85,14 +92,20 @@ div{
   flex-direction: column;
   background-size: cover;
   height: 500px;
-  width: 100%;
+  width: fit-content;
   
 }
 .star{
     width: 100px;
     display: flex;
     align-items: flex-end;
+    position: absolute;
+  bottom: -20px;   /* pushes the star outside .one */
+  right: -20px;    /* moves it slightly off to the right */
+  width: 80px;     /* or whatever size fits your design */
+  height: auto;
 }
+
 
 h1{
   font-size: 90px;
@@ -110,13 +123,16 @@ h2{
 .two{
         background-color: #fefae0;
         color:#283618;
-        padding: 16px;
+        padding: 10px;
         width: fit-content;
         height: fit-content;
+        margin: 16px;
      }
 
 .three{
     color:#fefae0;
+    width: fit-content;
+    margin: 16px;
    
 }
 .three img {
@@ -124,6 +140,8 @@ h2{
 }
 .three h2 {
     margin-bottom: 0px;
+    margin-top: 0;
+    padding: 0 10px 10px 10px;
 }
 .four{
     color:#283618;
@@ -134,90 +152,23 @@ h2{
     align-items: center;
     text-align: center;
     margin: 16px;
+    margin-top: 32px;
     border-top-left-radius: 200px;
 
 }
 
-.right {
-    width: 100%;
-    padding: 16px;
+
+.one, .two, .three, .four{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /** TABLET **/
 @media (min-width: 600px) {
-    .head, .menu {
-        display:none;
-    }
     
-    .web-menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-        
-    ul {
-        margin: 20px 0;
-        padding:0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    li {
-        font-size: 30px;
-        margin: 0 16px;
-        padding: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 50px;
-    }
-
-    .green:hover{
-        background-color:#fefae0;
-        color: #606c38 ;
-    }
-
-    .real-logo{
-        width: 70px;
-        height: 70px;
-        border-radius: 25px;
-        padding: 10px;
-        margin: 0;
-        
-    }
-
-    .socials {
-        display: flex;
-        justify-content: space-between;
-        background-color: #272727;
-        gap: 3vw;
-    
-    }
-
-    .socials:hover {
-        background-color: #fefae0;
-    }
-    .socials img {
-        filter: brightness(0) saturate(100%)invert(13%) sepia(0%) saturate(5%) hue-rotate(143deg) brightness(101%) contrast(94%);
-    }
-
-    .web-logo{
-        background-color: #fefae0;
-        height: 50px;
-
-    }
-
-    .web-logo:hover{
-        background-color:#606c38 ;
-     }
-      .real-logo{
-        filter: brightness(0%) saturate(100%) invert(97%) sepia(5%) saturate(1350%) hue-rotate(328deg) brightness(105%) contrast(99%);
-    }
-
     .content{   
         display: flex;
     }
@@ -228,15 +179,25 @@ h2{
         
     }
 
+      .star {
+    bottom: -10px;
+    right: -10px;
+    width: 60px;
+  }
+
     .right{
         display: flex;
         flex-direction: flex-start;
         flex-wrap: wrap;
         width: 50%;
+        margin-right: 16px;
     }
 
     .two, .three, .four{
         width: 100%;
+    }
+    .two, .three, .four{
+        margin: 16px 0;
     }
 
     h2{
@@ -257,6 +218,7 @@ h2{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 16px 0;
     }
     ul {
         margin: 20px 0;
@@ -299,7 +261,7 @@ h2{
         background-color: #fefae0;
     }
     
-    .socials img {
+    .socials img:hover {
             filter: brightness(0) saturate(100%)invert(13%) sepia(0%) saturate(5%) hue-rotate(143deg) brightness(101%) contrast(94%);
     }
 
@@ -312,7 +274,7 @@ h2{
         background-color:#606c38 ;
         
     }
-        .real-logo{
+        .real-logo:hover{
         filter: brightness(0%) saturate(100%) invert(97%) sepia(5%) saturate(1350%) hue-rotate(328deg) brightness(105%) contrast(99%);
     }
     .content{   
@@ -321,19 +283,31 @@ h2{
 
     .one {
         height: 80vh;
+        width: 50%;
+        margin: 16px 32px;
         
     }
     .right{
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        margin: 0;
         gap: 32px;
+        
     
     }
+    
     .two, .three, .four{
         display: flex;
         flex-direction: column;
         max-width: 45%;
+    }
+    .three{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .four{
+        margin-top: 0;
+        padding-top: 0;
     }
 
     h2 {
