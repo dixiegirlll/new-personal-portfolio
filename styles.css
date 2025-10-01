@@ -16,6 +16,7 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
+     display: none;
 
 }
 .menu ul{
@@ -261,7 +262,7 @@ h2{
         background-color: #fefae0;
     }
     
-    .socials img:hover {
+    .socials:hover img{
             filter: brightness(0) saturate(100%)invert(13%) sepia(0%) saturate(5%) hue-rotate(143deg) brightness(101%) contrast(94%);
     }
 
@@ -280,6 +281,7 @@ h2{
     .content{   
         display: flex;
     }
+
 
     .one {
         height: 80vh;

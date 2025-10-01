@@ -14,14 +14,14 @@
             <div class="logo">
                 <img src="logo.svg" class="real-logo">
             </div>
-            <button class="hamburger hamburger--minus" type="button">
+            <button class="hamburger hamburger--minus" type="button" id="hamburger">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
         
     </div>
-    <div class="menu">
+    <div class="menu" id="menu">
             <ul>
                 <li>Projects</li>
                 <li>About</li>
@@ -59,10 +59,25 @@
             </div>
     </div>
     <script>
+        
+
         const hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function(){
-            hamburger.classList.toggle("is-active");
-        });
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener("click", function(){
+    // Toggle hamburger animation
+    hamburger.classList.toggle("is-active");
+
+    // Toggle menu visibility
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
+
+
+
     </script>
 
 </body>
